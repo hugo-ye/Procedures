@@ -1,12 +1,9 @@
 package com.company;
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
-        int[] lol = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println(Arrays.toString(alternate(lol)));
+
     }
 
     public static int sumUpTo(int n) { //homework2
@@ -32,8 +29,8 @@ public class Main {
 
     public static boolean any(int[] a, int[] b) { //homework3
         boolean temp = false;
-        for (int i = 0; i < a.length; i++) {
-            if (contains(b, a[i])) {
+        for (int j : a) {
+            if (contains(b, j)) {
                 temp = true;
                 break;
             }
@@ -93,11 +90,7 @@ public class Main {
     }
 
     public static boolean palindrome(int[] array) { //homework5
-        if (equal(array, reverse(array))) {
-            return true;
-        } else {
-            return false;
-        }
+        return equal(array, reverse(array));
     }
 
     public static void remove(int[] in, int x, int[] out) { //homework6
