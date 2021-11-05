@@ -1,9 +1,14 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-
+        int[] in = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1};
+        int[] out = {6, 6, 6, 6, 6, 6, 6, 6, 6, 6};
+        remove(in, 4, out);
+        System.out.println(Arrays.toString(out));
     }
 
     public static int sumUpTo(int n) { //homework2
@@ -94,17 +99,14 @@ public class Main {
     }
 
     public static void remove(int[] in, int x, int[] out) { //homework6
-        int inIndex = 0;
-        int outIndex = 0;
-        while (inIndex < in.length) {
-            if (in[inIndex] == x) {
-                outIndex += 0;
-            } else {
-                out[outIndex] = in[inIndex];
-                outIndex++;
-
+        for (int i = 0; i < 10; i++) {
+            out[i] = 0;
+        }
+        for (int i = 0, j = 0; i < 10; i++) {
+            if (in[i] != x) {
+                out[j] = in[i];
+                j++;
             }
-            inIndex++;
         }
     }
 
