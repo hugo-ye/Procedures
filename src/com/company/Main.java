@@ -98,7 +98,7 @@ public class Main {
         return equal(array, reverse(array));
     }
 
-    public static void remove(int[] in, int x, int[] out) { //homework6
+    public static void remove(int[] in, int x, int[] out) {
         for (int i = 0; i < 10; i++) {
             out[i] = 0;
         }
@@ -107,6 +107,20 @@ public class Main {
                 out[j] = in[i];
                 j++;
             }
+        }
+    }
+
+    public static void remove2(int[] in, int x, int[] out) { //homework6 option 2
+        int j = 0;
+        for (int i = 0; i < 10; i++) {
+            if (in[i] != x) {
+                out[j] = in[i];
+                j++;
+            }
+
+        }
+        for (int i = 9; i > j - 1; i--) {
+            out[i] = 0;
         }
     }
 
